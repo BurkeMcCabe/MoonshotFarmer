@@ -15,7 +15,6 @@ namespace Moonshot_Farmer
     {
 
         public Vector2 position;
-        Texture2D img;
         float speed;
         GameContent gameContent;
         Camera camera;

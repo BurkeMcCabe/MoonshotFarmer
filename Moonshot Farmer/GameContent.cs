@@ -14,10 +14,14 @@ namespace Moonshot_Farmer
     {
 
         public static float scale = 6;
+        public static int tileSize = 8;
 
         public Texture2D imgGuy;
         public Texture2D imgGrass;
         public Texture2D imgDirt;
+        public Texture2D imgSelection;
+
+        public SpriteFont arial;
 
 
         public GameContent(ContentManager content)
@@ -25,6 +29,9 @@ namespace Moonshot_Farmer
             imgGuy = content.Load<Texture2D>("imgGuy");
             imgGrass = content.Load<Texture2D>("imgGrass");
             imgDirt = content.Load<Texture2D>("imgDirt");
+            imgSelection = content.Load<Texture2D>("imgSelection");
+
+            arial = content.Load<SpriteFont>("Arial");
         }
 
 

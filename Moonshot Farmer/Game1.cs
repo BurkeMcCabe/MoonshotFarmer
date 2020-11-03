@@ -11,8 +11,11 @@ namespace Moonshot_Farmer
         GameContent gameContent;
         Farmer farmer;
         Ground ground;
+        Selection selection;
         public static KeyboardState keyboardState;
         Camera playerCamera;
+        Vector2 mousePosition;
+        MouseState mouseState;
 
         public Game1()
         {
@@ -35,9 +38,10 @@ namespace Moonshot_Farmer
             spriteBatch = new SpriteBatch(GraphicsDevice);
             gameContent = new GameContent(Content);
 
-            playerCamera = new Camera(100, 100);
-            farmer = new Farmer(10, 10, 5, gameContent, playerCamera);
-            ground = new Ground(10, 10, gameContent, playerCamera);
+            playerCamera = new Camera(0, 0);
+            farmer = new Farmer(0, 0, 5, gameContent, playerCamera);
+            ground = new Ground(0, 0, gameContent, playerCamera);
+            selection = new Selection(gameContent, playerCamera);
 
         }
         protected override void Update(GameTime gameTime)
@@ -53,8 +57,13 @@ namespace Moonshot_Farmer
                 graphics.ApplyChanges();
             }
 
+            mouseState = Mouse.GetState();
+            mousePosition.X = mouseState.X;
+            mousePosition.Y = mouseState.Y;
+
             farmer.Update();
             playerCamera.followCenter(farmer.position, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, gameContent.imgGuy.Width, gameContent.imgGuy.Height);
+            selection.Update(mousePosition);
 
             base.Update(gameTime);
         }
@@ -65,6 +74,7 @@ namespace Moonshot_Farmer
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullNone);
 
             ground.Draw();
+            selection.Draw();
             farmer.Draw();
 
             spriteBatch.End();

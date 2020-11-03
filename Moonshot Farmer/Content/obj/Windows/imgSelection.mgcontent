@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/burke/source/repos/Moonshot Farmer/Moonshot Farmer/Content/imgGrass.png</SourceFile>
-  <SourceTime>2020-11-03T16:00:12.1798722-05:00</SourceTime>
-  <DestFile>C:/Users/burke/source/repos/Moonshot Farmer/Moonshot Farmer/Content/bin/Windows/imgGrass.xnb</DestFile>
-  <DestTime>2020-11-03T16:00:15.4617842-05:00</DestTime>
+  <SourceFile>C:/Users/burke/source/repos/Moonshot Farmer/Moonshot Farmer/Content/imgSelection.png</SourceFile>
+  <SourceTime>2020-11-03T00:06:11.9276992-05:00</SourceTime>
+  <DestFile>C:/Users/burke/source/repos/Moonshot Farmer/Moonshot Farmer/Content/bin/Windows/imgSelection.xnb</DestFile>
+  <DestTime>2020-11-03T00:06:35.6891765-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T10:05:36-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

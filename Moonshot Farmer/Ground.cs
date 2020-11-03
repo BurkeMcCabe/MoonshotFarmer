@@ -44,9 +44,8 @@ namespace Moonshot_Farmer
                     switch (groundTiles[i][j])
                     {
                         case "1":
-                            Game1.spriteBatch.Draw(gameContent.imgGrass, new Vector2(-camera.position.X + position.X + 
-                                gameContent.imgGrass.Width * j * GameContent.scale, 
-                                -camera.position.Y + position.Y + gameContent.imgGrass.Height * i * GameContent.scale), 
+                            Game1.spriteBatch.Draw(gameContent.imgGrass, new Vector2(-camera.position.X + position.X + gameContent.imgGrass.Width * j * GameContent.scale, 
+                                                                                     -camera.position.Y + position.Y + gameContent.imgGrass.Height * i * GameContent.scale), 
                                 null, Color.White, 0, new Vector2(0, 0), GameContent.scale, SpriteEffects.None, 0);
                             break;
                         case "2":
