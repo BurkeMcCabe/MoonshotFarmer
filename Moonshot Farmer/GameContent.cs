@@ -17,7 +17,7 @@ namespace Moonshot_Farmer
 
         public Texture2D imgGuy;
         public Texture2D imgGrass;
-        public Texture2D imgDirt    ;
+        public Texture2D imgDirt;
 
 
         public GameContent(ContentManager content)

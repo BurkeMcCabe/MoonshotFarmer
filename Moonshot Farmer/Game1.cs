@@ -25,6 +25,9 @@ namespace Moonshot_Farmer
             graphics.PreferredBackBufferHeight = 720;
             graphics.ApplyChanges();
 
+            this.IsMouseVisible = true;
+            Window.AllowUserResizing = true;
+
             base.Initialize();
         }
         protected override void LoadContent()
@@ -43,6 +46,12 @@ namespace Moonshot_Farmer
                 Exit();
 
             keyboardState = Keyboard.GetState();
+
+            if (keyboardState.IsKeyDown(Keys.F11))
+            {
+                graphics.ToggleFullScreen();
+                graphics.ApplyChanges();
+            }
 
             farmer.Update();
             playerCamera.followCenter(farmer.position, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, gameContent.imgGuy.Width, gameContent.imgGuy.Height);
