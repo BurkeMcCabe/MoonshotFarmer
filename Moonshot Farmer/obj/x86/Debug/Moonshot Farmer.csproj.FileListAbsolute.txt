@@ -25,3 +25,4 @@ C:\Users\burke\source\repos\Moonshot Farmer\Moonshot Farmer\obj\x86\Debug\Moonsh
 C:\Users\burke\source\repos\Moonshot Farmer\Moonshot Farmer\obj\x86\Debug\Moonshot Farmer.pdb
 C:\Users\burke\source\repos\Moonshot Farmer\Moonshot Farmer\bin\Windows\x86\Debug\Content\imgGuy.xnb
 C:\Users\burke\source\repos\Moonshot Farmer\Moonshot Farmer\bin\Windows\x86\Debug\Content\imgGrass.xnb
+C:\Users\burke\source\repos\Moonshot Farmer\Moonshot Farmer\bin\Windows\x86\Debug\Content\imgDirt.xnb

@@ -17,12 +17,14 @@ namespace Moonshot_Farmer
 
         public Texture2D imgGuy;
         public Texture2D imgGrass;
+        public Texture2D imgDirt    ;
 
 
         public GameContent(ContentManager content)
         {
             imgGuy = content.Load<Texture2D>("imgGuy");
             imgGrass = content.Load<Texture2D>("imgGrass");
+            imgDirt = content.Load<Texture2D>("imgDirt");
         }
 
 

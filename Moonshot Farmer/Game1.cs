@@ -34,7 +34,7 @@ namespace Moonshot_Farmer
 
             playerCamera = new Camera(100, 100);
             farmer = new Farmer(10, 10, 5, gameContent, playerCamera);
-            ground = new Ground(10, 10, 20, 10, gameContent, playerCamera);
+            ground = new Ground(10, 10, gameContent, playerCamera);
 
         }
         protected override void Update(GameTime gameTime)
