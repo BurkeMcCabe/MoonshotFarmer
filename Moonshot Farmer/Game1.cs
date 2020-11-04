@@ -16,6 +16,8 @@ namespace Moonshot_Farmer
         Camera playerCamera;
         Vector2 mousePosition;
         MouseState mouseState;
+        int smallScreenWidth;
+        int smallScreenHeight;
 
         public Game1()
         {
@@ -24,8 +26,11 @@ namespace Moonshot_Farmer
         }
         protected override void Initialize()
         {
-            graphics.PreferredBackBufferWidth = 1280;
-            graphics.PreferredBackBufferHeight = 720;
+            smallScreenWidth = 1280;
+            smallScreenHeight = 720;
+
+            graphics.PreferredBackBufferWidth = smallScreenWidth;
+            graphics.PreferredBackBufferHeight = smallScreenHeight;
             graphics.ApplyChanges();
 
             this.IsMouseVisible = true;
@@ -49,12 +54,29 @@ namespace Moonshot_Farmer
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+
             keyboardState = Keyboard.GetState();
 
             if (keyboardState.IsKeyDown(Keys.F11))
             {
-                graphics.ToggleFullScreen();
-                graphics.ApplyChanges();
+                if (graphics.PreferredBackBufferWidth == GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width)
+                {
+                    graphics.PreferredBackBufferWidth = smallScreenWidth;
+                    graphics.PreferredBackBufferHeight = smallScreenHeight;
+
+                    graphics.ToggleFullScreen();
+                    graphics.ApplyChanges();
+                }
+                else
+                {
+                    smallScreenHeight = graphics.PreferredBackBufferHeight;
+                    smallScreenWidth = graphics.PreferredBackBufferWidth;
+                    graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+                    graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+
+                    graphics.ToggleFullScreen();
+                    graphics.ApplyChanges();
+                }
             }
 
             mouseState = Mouse.GetState();

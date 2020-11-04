@@ -40,6 +40,11 @@ namespace Moonshot_Farmer
             gridPosition.X = ((position.X - position.X % (GameContent.tileSize * GameContent.scale)) / (GameContent.tileSize * GameContent.scale)) + (camera.position.X - camera.position.X % (GameContent.tileSize * GameContent.scale)) / (GameContent.tileSize * GameContent.scale);
         }
 
+        public void Update()
+        {
+
+        }
+
         public void Draw()
         {
             Game1.spriteBatch.Draw(gameContent.imgSelection, new Vector2(position.X, position.Y), null, Color.White, 0, new Vector2(0, 0), GameContent.scale, SpriteEffects.None, 0);
